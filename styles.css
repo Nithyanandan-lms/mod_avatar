@@ -101,7 +101,7 @@ table img.avatar-preview-image {
 /* Avatar tabs styles */
 .mod_avatar .avatar-tabs button {
     position: relative;
-     &:after {
+    &:after {
         content: "";
         position: absolute;
         bottom: -2px;
@@ -271,6 +271,7 @@ table img.avatar-preview-image {
         flex: 0 1 calc(50% - 1rem);
     }
 }
+
 @media (max-width: 575px) {
     .mod_avatar .avatar-gallery .gallery-block {
         flex-basis: 100%;
@@ -376,16 +377,16 @@ table img.avatar-preview-image {
     }
 }
 .avatar-thumbnail {
-      width: 40px;
-      height: 40px;
-      object-fit: cover;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
 }
 
 /* Popover region */
 .mod-avatar-popover-region {
-      float: right;
-      position: relative;
-      margin: 0 0.5rem;
+    float: right;
+    position: relative;
+    margin: 0 0.5rem;
     .popover-region-toggle {
         width: 35px;
         height: 35px;
@@ -412,7 +413,7 @@ table img.avatar-preview-image {
     }
     &.show .popover-region-container {
         visibility: visible;
-          opacity: 1;
+        opacity: 1;
     }
     .popover-region-header-container {
         padding: 0.75rem 1rem;
@@ -577,7 +578,8 @@ table img.avatar-preview-image {
 }
 #page-admin-mod-avatar-manage ul.avatar-usage-list {
     span.usage-item {
-        text-wrap-mode: nowrap;
+        width: max-content;
+        display: inline-block;
     }
 
     list-style: circle;
@@ -587,9 +589,9 @@ table img.avatar-preview-image {
     max-width: 35%;
     width: 100%;
 }
-#page-admin-mod-avatar-manage table.avatars tr td.cell {
+/* #page-admin-mod-avatar-manage table.avatars tr td.cell {
     text-wrap-style: pretty;
-}
+} */
 
 #page-mod-avatar-view_avatar  .avatar-block .avatar-info-navigation {
     margin: 20px 5px;
