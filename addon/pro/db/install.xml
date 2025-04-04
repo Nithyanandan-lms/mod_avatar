@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/avatar/addon/pro/db" VERSION="20250324" COMMENT="XMLDB file for Moodle mod/avatar/addon/pro"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="avataraddon_pro" COMMENT="Pro data for avatar.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="18" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="cmavatarid" TYPE="int" LENGTH="18" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="collectiontotallimit" TYPE="int" LENGTH="18" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="collectionlimitperuser" TYPE="int" LENGTH="18" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="collectionlimitperinterval" TYPE="int" LENGTH="18" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="collectioninterval" TYPE="int" LENGTH="18" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="cmavatarid" TYPE="unique" FIELDS="cmavatarid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="avataraddon_pro_avatar" COMMENT="Pro data for cm avatar.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="18" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="avatarid" TYPE="int" LENGTH="18" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="coursecategories" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="includesubcategories" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="cohorts" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="totalcapacity" TYPE="int" LENGTH="18" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="avatarid" TYPE="unique" FIELDS="avatarid"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

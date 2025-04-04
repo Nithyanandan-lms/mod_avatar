@@ -1,0 +1,19 @@
+<div class="avatar-popover">
+    {{#has_avatars}}
+    <div class="avatar-list d-flex">
+        {{#avatars}}
+        <div class="avatar-item {{#primary}}primary-avatar{{/primary}} {{additionalclass}}" data-tooltip="{{{name}}}">
+            <a href="{{{viewurl}}}" class="view-avatar">
+                <img
+                    src="{{variantimage}}"
+                    alt="{{{name}}}"
+                    data-title="{{{name}}}"
+                    class="presentation avatar-thumbnail me-2 rounded-circle"
+                    style="width: 40px; height: 40px;"
+                >
+            </a>
+        </div>
+        {{/avatars}}
+    </div>
+    {{/has_avatars}}
+</div>
